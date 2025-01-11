@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "349461823789",
+    "project_id": "evaluacionfinal-b9fce",
+    "storage_bucket": "evaluacionfinal-b9fce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349461823789:android:2440b75d12b2e8829e93a4",
+        "android_client_info": {
+          "package_name": "com.example.prueba_fin_de_ciclo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaG6V0zKJBXTTmqIvLlkJ1v5pI2ZdVZB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
