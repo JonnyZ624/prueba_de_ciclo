@@ -13,7 +13,7 @@ class Proyecto extends StatefulWidget {
 class _ProyectoState extends State<Proyecto> {
   final _tituloController = TextEditingController();
   final _descripcionController = TextEditingController();
-  final _resultadoController = TextEditingController(); // Nuevo controlador para resultado esperado
+  final _resultadoController = TextEditingController(); 
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -29,12 +29,11 @@ class _ProyectoState extends State<Proyecto> {
       await FirebaseFirestore.instance.collection('proyectos').add({
         'titulo': _tituloController.text,
         'descripcion': _descripcionController.text,
-        'resultado_esperado': _resultadoController.text, // Guardamos el resultado esperado
+        'resultado_esperado': _resultadoController.text, 
         'usuario_id': usuario?.uid,
         'tareas': [],
       });
 
-      // Navegar a PantallaPrincipalPr después de crear el proyecto
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) =>  PantallaPrincipalPr()), // Cambié a PantallaPrincipalPr

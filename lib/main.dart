@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:prueba_fin_de_ciclo/navigators/drawer.dart';
-import 'package:prueba_fin_de_ciclo/registro.dart'; 
-
+import 'package:prueba_fin_de_ciclo/registro.dart';
+import 'package:prueba_fin_de_ciclo/login.dart'; 
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -24,17 +24,30 @@ class Prueba extends StatelessWidget {
           title: const Text("Pantalla de Inicio"),
         ),
         drawer: MiDrawer(),
-              // Puedes agregar más elementos aquí
-        
         body: Center(
-          child: ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Registro()),
-              );
-            },
-            child: const Text("Ir a Registro"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Registro()),
+                  );
+                },
+                child: const Text("Ir a Registro"),
+              ),
+              const SizedBox(height: 20), 
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Login()), 
+                  );
+                },
+                child: const Text("Ir a Login"),
+              ),
+            ],
           ),
         ),
       ),

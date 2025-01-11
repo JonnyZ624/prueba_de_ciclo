@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:prueba_fin_de_ciclo/proyecto.dart';  // Importación para crear nuevos proyectos
+import 'package:prueba_fin_de_ciclo/proyecto.dart';  
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class PantallaPrincipalPr extends StatelessWidget {
@@ -34,10 +34,9 @@ class PantallaPrincipalPr extends StatelessWidget {
                 child: ListTile(
                   title: Text(proyecto['titulo']),
                   subtitle: Text(proyecto['descripcion']),
-                  trailing: Icon(Icons.arrow_forward),
+                  
                   onTap: () {
-                    // Aquí puedes agregar la navegación a otra pantalla si es necesario
-                    // Por ejemplo, para ver detalles del proyecto
+                    
                   },
                 ),
               );
